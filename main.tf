@@ -1,13 +1,13 @@
 resource "azurerm_resource_group" "tr_rg" {
-  name     = "1-a9102e8d-playground-sandbox"
-  location = "West US"
+  name     = var.rg_name
+  location = var.region
   
 }
 
 resource "azurerm_storage_account" "tr_storage_account" {
-  name                     = "terrastoragelab"
-  resource_group_name      = "1-a9102e8d-playground-sandbox"
-  location                 = "West US"
+  name                     = var.storage_name
+  resource_group_name      = var.rg_name
+  location                 = var.region
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
