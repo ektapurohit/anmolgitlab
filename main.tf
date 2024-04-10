@@ -13,5 +13,6 @@ resource "azurerm_storage_account" "tr_storage_account" {
 
   tags = {
     environment = "staging"
+    ms-resource-usage = "azure-cloud-shell"
   }
 }
